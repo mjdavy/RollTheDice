@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DCBF0272BE52C5500EDC258 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBF0262BE52C5500EDC258 /* GameViewModel.swift */; };
+		8DCBF0292BE52C8A00EDC258 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBF0282BE52C8A00EDC258 /* GameModel.swift */; };
+		8DCBF02B2BE52CB900EDC258 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBF02A2BE52CB900EDC258 /* PlayerModel.swift */; };
+		8DCBF02E2BE54F3400EDC258 /* DiceView3D in Frameworks */ = {isa = PBXBuildFile; productRef = 8DCBF02D2BE54F3400EDC258 /* DiceView3D */; };
+		8DCBF0302BE5516100EDC258 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBF02F2BE5516100EDC258 /* GameView.swift */; };
 		8DDD84502BE524D1001096FA /* RollTheDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD844F2BE524D1001096FA /* RollTheDiceApp.swift */; };
 		8DDD84522BE524D1001096FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD84512BE524D1001096FA /* ContentView.swift */; };
 		8DDD84542BE524D2001096FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DDD84532BE524D2001096FA /* Assets.xcassets */; };
@@ -14,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8DCBF0262BE52C5500EDC258 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		8DCBF0282BE52C8A00EDC258 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		8DCBF02A2BE52CB900EDC258 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		8DCBF02F2BE5516100EDC258 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		8DDD844C2BE524D1001096FA /* RollTheDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollTheDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDD844F2BE524D1001096FA /* RollTheDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollTheDiceApp.swift; sourceTree = "<group>"; };
 		8DDD84512BE524D1001096FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,12 +37,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCBF02E2BE54F3400EDC258 /* DiceView3D in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DCBF0232BE52BEA00EDC258 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DCBF02F2BE5516100EDC258 /* GameView.swift */,
+				8DDD84512BE524D1001096FA /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DCBF0242BE52BF400EDC258 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8DCBF0262BE52C5500EDC258 /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8DCBF0252BE52C0000EDC258 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DCBF0282BE52C8A00EDC258 /* GameModel.swift */,
+				8DCBF02A2BE52CB900EDC258 /* PlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8DDD84432BE524D1001096FA = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +89,11 @@
 		8DDD844E2BE524D1001096FA /* RollTheDice */ = {
 			isa = PBXGroup;
 			children = (
+				8DCBF0252BE52C0000EDC258 /* Model */,
+				8DCBF0242BE52BF400EDC258 /* ViewModel */,
+				8DCBF0232BE52BEA00EDC258 /* View */,
 				8DDD845E2BE5276C001096FA /* Info.plist */,
 				8DDD844F2BE524D1001096FA /* RollTheDiceApp.swift */,
-				8DDD84512BE524D1001096FA /* ContentView.swift */,
 				8DDD84532BE524D2001096FA /* Assets.xcassets */,
 				8DDD84552BE524D2001096FA /* RollTheDice.entitlements */,
 				8DDD84562BE524D2001096FA /* Preview Content */,
@@ -87,6 +125,9 @@
 			dependencies = (
 			);
 			name = RollTheDice;
+			packageProductDependencies = (
+				8DCBF02D2BE54F3400EDC258 /* DiceView3D */,
+			);
 			productName = RollTheDice;
 			productReference = 8DDD844C2BE524D1001096FA /* RollTheDice.app */;
 			productType = "com.apple.product-type.application";
@@ -115,6 +156,9 @@
 				Base,
 			);
 			mainGroup = 8DDD84432BE524D1001096FA;
+			packageReferences = (
+				8DCBF02C2BE54F3400EDC258 /* XCRemoteSwiftPackageReference "DiceView3D" */,
+			);
 			productRefGroup = 8DDD844D2BE524D1001096FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,7 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCBF02B2BE52CB900EDC258 /* PlayerModel.swift in Sources */,
+				8DCBF0272BE52C5500EDC258 /* GameViewModel.swift in Sources */,
+				8DCBF0292BE52C8A00EDC258 /* GameModel.swift in Sources */,
 				8DDD84522BE524D1001096FA /* ContentView.swift in Sources */,
+				8DCBF0302BE5516100EDC258 /* GameView.swift in Sources */,
 				8DDD84502BE524D1001096FA /* RollTheDiceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -256,6 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -363,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DCBF02C2BE54F3400EDC258 /* XCRemoteSwiftPackageReference "DiceView3D" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mjdavy/DiceView3D.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DCBF02D2BE54F3400EDC258 /* DiceView3D */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DCBF02C2BE54F3400EDC258 /* XCRemoteSwiftPackageReference "DiceView3D" */;
+			productName = DiceView3D;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8DDD84442BE524D1001096FA /* Project object */;
 }
